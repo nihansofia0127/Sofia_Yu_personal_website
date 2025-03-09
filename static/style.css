@@ -1,0 +1,55 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wght" 100;
+    padding: 5px;
+    margin: 5px;
+}
+#webname {
+    background-color: #2E2E2E; 
+    color: #D3D3D3; 
+    padding: 10px;
+    font-weight: 300; 
+    letter-spacing: 1px; 
+}
+.nav-link {
+    text-decoration: none; /* Removes underline */
+    color: #4A4A4A; 
+    font-weight: 300; 
+    margin-right: 15px; 
+    transition: color 0.3s ease-in-out; 
+}
+/* table headers */
+th {
+    padding: 12px 0; 
+    background-color: #2E2E2E; 
+    color: #D3D3D3;
+    text-align: left;
+    width: fit-content; 
+}
+
+/* zebra-striping for rows */
+tbody tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+/* general table styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* removes double borders */
+}
+
+/* table cells */
+td, th {
+    border: 1px solid #B0B0B0; 
+    padding: 10px;
+}
+
+/* Styling for all form elements */
+form, form * {
+    display: block;
+    margin: 0 auto; 
+    text-align: center; 
+}
