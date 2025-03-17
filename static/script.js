@@ -106,4 +106,63 @@ window.onload = function() {
     addYear();
 };
 
+$(document).ready(function () {
+    $("#fullBio").hide();
+    $("#readLessBtn").hide();
+
+    $("#readMoreBtn").click(function () {
+        $("#shortBio").hide();
+        $("#fullBio").fadeIn();
+        $("#readLessBtn").show();
+    });
+
+    $("#readLessBtn").click(function () {
+        $("#fullBio").fadeOut(function () {
+            $("#shortBio").show();
+            $("#readLessBtn").hide();
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (event) {
+        let valid = true;
+
+        // name validation
+        const name = document.getElementById("name");
+        const nameError = document.getElementById("nameError");
+        if (!name.checkValidity()) {
+            nameError.textContent = "Please enter your name.";
+            valid = false;
+        } else {
+            nameError.textContent = "";
+        }
+
+        // email validation
+        const email = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+        if (!email.checkValidity()) {
+            emailError.textContent = "Please enter a valid email.";
+            valid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+        // comment validation
+        const comment = document.getElementById("comment");
+        const commentError = document.getElementById("commentError");
+        if (!comment.checkValidity()) {
+            commentError.textContent = "Please enter a message.";
+            valid = false;
+        } else {
+            commentError.textContent = "";
+        }
+
+        if (!valid) {
+            event.preventDefault(); // no form submission if validation fails
+        }
+    });
+});
 

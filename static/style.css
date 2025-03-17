@@ -72,3 +72,25 @@ form, form * {
 #showListButton:hover {
     background-color: #2E2E2E;
 }
+
+.toggle-button {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.toggle-button:hover {
+    text-decoration: underline;
+}
+
+#fullBio {
+    display: none; 
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}

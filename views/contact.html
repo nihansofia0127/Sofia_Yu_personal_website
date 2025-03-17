@@ -28,18 +28,22 @@
         <h2>Contact Me</h2>
     </div>
 
-    <form action="#" method="post">
+    <form id="contactForm">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-
+        <input type="text" id="name" name="name" required>
+        <span class="error-message" id="nameError"></span><br><br>
+    
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="emailError"></span><br><br>
+    
         <label for="comment">Comment:</label><br>
-        <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
-
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+        <span class="error-message" id="commentError"></span><br><br>
+    
         <input type="submit" value="Submit">
     </form>
+    
 
     <h3>Contact Information</h3>
         <table border="1">

@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="./static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         img {
             width: 150px;
@@ -35,17 +36,29 @@
     <div class="main">
         <h2 id="greeting">Hi, my name is Sofia</h2>
         <img src="static/profile.jpg" alt="A picture of Sofia">
-        <p id="intro">I'm passionate about leveraging technology for societal impact, with solid programming skills in C, Python, Java, and React, and a strong background in problem-solving.
 
-            Currently, I'm a student at Carnegie Mellon University, majoring in Information Systems and Artificial Intelligence. I contribute to developing Chrome and Thunderbird extensions and debugging code as a Research Assistant, and I also worked on AI-driven projects in gaming and virtual machine implementation. Additionally, I'm about to start a Teaching Assistant role for an HCI course at the Carnegie Mellon School of Computer Science.
+        <!-- Short Bio -->
+        <p id="shortBio">
+            I'm passionate about leveraging technology for societal impact.
+            <span id="readMoreBtn" class="toggle-button">Read More</span>
+        </p>
+
+        <!-- Full Bio (Initially Hidden) -->
+        <p id="fullBio">
+            With solid programming skills in C, Python, Java, and React, and a strong background in problem-solving,
+            I'm currently a student at Carnegie Mellon University, majoring in Information Systems and Artificial Intelligence.
+            I contribute to developing Chrome and Thunderbird extensions and debugging code as a Research Assistant, and I also worked 
+            on AI-driven projects in gaming and virtual machine implementation. Additionally, I'm about to start a Teaching Assistant 
+            role for an HCI course at the Carnegie Mellon School of Computer Science.
             
-            Outside of work and academics, I'm a bubble tea enthusiast. I enjoy experimenting with recipes and collaborating with friends to perfect the taste.
-            </p>
+            Outside of work and academics, I'm a bubble tea enthusiast. I enjoy experimenting with recipes and collaborating with 
+            friends to perfect the taste.
+        </p>
+        <span id="readLessBtn" class="toggle-button">Read Less</span>
     </div>
 
     <footer>
         <p id="copyYear">designed and coded by Sofia Yu &copy;</p>
     </footer>
-    
 </body>
 </html>
