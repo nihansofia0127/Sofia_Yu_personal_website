@@ -40,8 +40,8 @@ function findTheBanana(arr) {
         }
     }
 }
-findTheBanana(L1);
-findTheBanana(L2);
+// findTheBanana(L1);
+// findTheBanana(L2);
 
 
 function forEachFindTheBanana(arr) {
@@ -52,8 +52,8 @@ function forEachFindTheBanana(arr) {
     });
 }
 
-forEachFindTheBanana(L1);
-forEachFindTheBanana(L2);
+// forEachFindTheBanana(L1);
+// forEachFindTheBanana(L2);
 
 
 function greetingFunc() {
@@ -77,8 +77,33 @@ function greetingFunc() {
     }
 }
 
-window.onload = greetingFunc;
+// window.onload = greetingFunc;
 
-greetingFunc();
+// greetingFunc();s
+
+
+function addYear() {
+    var currentYear = new Date().getFullYear();
+    var yearElement = document.getElementById("copyYear");
+    if (yearElement) {
+        yearElement.innerHTML = "designed and coded by Sofia Yu &copy; " + currentYear;
+    }
+}
+
+function showList() {
+    var list = document.getElementById("funList");
+    var button = document.getElementById("showListButton");
+
+    if (list && button) {
+        list.style.display = "block"; // show the list
+        button.style.display = "none"; // hide the button
+    }
+}
+
+
+window.onload = function() {
+    greetingFunc();  
+    addYear();
+};
 
 

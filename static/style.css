@@ -53,3 +53,22 @@ form, form * {
     margin: 0 auto; 
     text-align: center; 
 }
+
+#funList {
+    display: none; /* Hide the list initially */
+    margin-top: 10px;
+}
+
+#showListButton {
+    background-color: #4A4A4A;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#showListButton:hover {
+    background-color: #2E2E2E;
+}
