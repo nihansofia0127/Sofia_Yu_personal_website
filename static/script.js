@@ -124,45 +124,55 @@ $(document).ready(function () {
     });
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
+    const formError = document.getElementById("formError");
+    const submitButton = document.getElementById("submit_button");
 
-    form.addEventListener("submit", function (event) {
-        let valid = true;
+    if (submitButton) { // Check if submit_button exists before adding event listener
+        submitButton.addEventListener("click", function (event) {
+            console.log("submit");
+            let valid = true;
 
-        // name validation
-        const name = document.getElementById("name");
-        const nameError = document.getElementById("nameError");
-        if (!name.checkValidity()) {
-            nameError.textContent = "Please enter your name.";
-            valid = false;
-        } else {
-            nameError.textContent = "";
-        }
+            // Name validation
+            const name = document.getElementById("name");
+            const nameError = document.getElementById("nameError");
+            if (!name || !name.checkValidity()) {
+                if (nameError) nameError.textContent = "Please enter your name.";
+                valid = false;
+            } else {
+                if (nameError) nameError.textContent = "";
+            }
 
-        // email validation
-        const email = document.getElementById("email");
-        const emailError = document.getElementById("emailError");
-        if (!email.checkValidity()) {
-            emailError.textContent = "Please enter a valid email.";
-            valid = false;
-        } else {
-            emailError.textContent = "";
-        }
+            // Email validation
+            const email = document.getElementById("email");
+            const emailError = document.getElementById("emailError");
+            if (!email || !email.checkValidity()) {
+                if (emailError) emailError.textContent = "Please enter a valid email.";
+                valid = false;
+            } else {
+                if (emailError) emailError.textContent = "";
+            }
 
-        // comment validation
-        const comment = document.getElementById("comment");
-        const commentError = document.getElementById("commentError");
-        if (!comment.checkValidity()) {
-            commentError.textContent = "Please enter a message.";
-            valid = false;
-        } else {
-            commentError.textContent = "";
-        }
+            // Comment validation
+            const comment = document.getElementById("comment");
+            const commentError = document.getElementById("commentError");
+            if (!comment || !comment.checkValidity()) {
+                if (commentError) commentError.textContent = "Please enter a message.";
+                valid = false;
+            } else {
+                if (commentError) commentError.textContent = "";
+            }
 
-        if (!valid) {
-            event.preventDefault(); // no form submission if validation fails
-        }
-    });
+            // Show form error message if validation fails
+            if (!valid) {
+                console.log("Form is invalid.");
+                if (formError) formError.innerHTML = "Please fill out the form correctly so I can get back to you.";
+                event.preventDefault(); // Prevent form submission
+            } else {
+                if (formError) formError.textContent = "";
+            }
+        });
+    }
 });
-

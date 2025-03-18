@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../static/script.js" defer></script>
 </head>
 <body>
@@ -41,8 +42,10 @@
         <textarea id="comment" name="comment" rows="4" required></textarea>
         <span class="error-message" id="commentError"></span><br><br>
     
-        <input type="submit" value="Submit">
+        <input type="submit" id="submit_button" value="Submit">
+        <p id="formError" class="form-error"></p>
     </form>
+    
     
 
     <h3>Contact Information</h3>
