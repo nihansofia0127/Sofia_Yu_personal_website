@@ -90,15 +90,15 @@ function addYear() {
     }
 }
 
-function showList() {
-    var list = document.getElementById("funList");
-    var button = document.getElementById("showListButton");
+// function showList() {
+//     var list = document.getElementById("funList");
+//     var button = document.getElementById("showListButton");
 
-    if (list && button) {
-        list.style.display = "block"; // show the list
-        button.style.display = "none"; // hide the button
-    }
-}
+//     if (list && button) {
+//         list.style.display = "block"; // show the list
+//         button.style.display = "none"; // hide the button
+//     }
+// }
 
 
 window.onload = function() {
@@ -176,3 +176,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            console.error("Error fetching advice:", error);
+            document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again!";
+        });
+}

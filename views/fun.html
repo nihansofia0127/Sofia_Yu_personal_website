@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,16 +25,32 @@
         </nav>
     </header>
 
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-        <button id="showListButton" onclick="showList()">Click to see...</button>
-        <ul id="funList">
-            <li>Traveling to new places and experiencing different cultures</li>
-            <li>Making boba and exploring different boba places</li>
-            <li>Go Kart</li>
-            <li>Gun shooting</li>
-            <li>Reading fiction and fantasy novels</li>
-        </ul>
+    <div class="mainLayout">
+        <div class="item1">
+            <h2>Things I love to do for fun</h2>
+            <!-- <button id="showListButton" onclick="showList()">Click to see...</button> -->
+            <ul id="funList">
+                <li>Traveling to new places and experiencing different cultures</li>
+                <li>Making boba and exploring different boba places</li>
+                <li>Go Kart</li>
+                <li>Gun shooting</li>
+                <li>Reading fiction and fantasy novels</li>
+            </ul>
+        </div>
+        <div class="item2">
+            <img src="../static/fun-image.jpg" alt="Fun Activity" class="funIMG">
+        </div>
+        <div class="item3">
+            <h2>I love cats!</h2>
+            <iframe class = "funVideo" width="560" height="315" src="https://www.youtube.com/embed/cytJLvf-eVs?si=uYyXA7Zgj9te8IkB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>        
+        <div class="item4">
+            <h2>Need Some Advice?</h2>
+            <div class="container">
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button class="adviceButton" onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>        
     </div>
 
     <footer>
