@@ -35,17 +35,16 @@ tbody tr:nth-child(even) {
     background-color: #F0F0F0;
 }
 
-/* general table styling */
-table {
-    width: 100%;
-    border-collapse: collapse; /* removes double borders */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
-/* table cells */
-td, th {
-    border: 1px solid #B0B0B0; 
-    padding: 10px;
+th, td {
+    padding: 8px;
+    text-align: left;
 }
+
 
 /* Styling for all form elements */
 form, form * {
